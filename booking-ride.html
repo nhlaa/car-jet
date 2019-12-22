@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>CAR-GET</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <link href="assets/css/jquery-ui.min.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.theme.min.css" rel="stylesheet"/>
+    <link href="assets/fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header-booking">
+    <div class="header-booking-title">احجز رحلتك الآن</div>
+</div>
+
+<div class="booking-card">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-md-12">
+
+
+                <div class="tab-content">
+
+                    <div class="tripType-switcher">
+                        <input type="radio" name="homeAway" id="way-1" checked="checked">
+                        <label for="way-1" class="way">ذهاب فقط</label>
+                        <input type="radio" name="homeAway" id="way-2" >
+                        <label for="way-2" class="way">ذهاب وعودة</label>
+                    </div>
+                    <div class="choose-trip">
+                        <div id="div1" class="form-group">
+                            <label> <i class="fas fa-map-marker-alt"></i> من</label>
+                            <select class="form-control" id="element1">
+                                <option>القاهرة</option>
+                                <option>الجيزة</option>
+                                <option>شرم الشيخ</option>
+                                <option>الاسكندرية</option>
+                            </select>
+                        </div>
+                        <div class="divider">
+                            <hr>
+                        </div>
+                        <div id="div2" class="form-group last-select">
+                            <label> <i class="fas fa-map-marker-alt"></i> الى</label>
+                            <select class="form-control" id="element2">
+                                <option class="active">شرم الشيخ</option>
+                                <option>القاهرة</option>
+                                <option>الجيزة</option>
+                                <option>الاسكندرية</option>
+                            </select>
+                        </div>
+                        <div class="swap">
+                            <button onclick="swap()" class="btn btn-primary" type="submit">
+                                <img src="assets/images/swap.png">
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- date -->
+                <div class="choose-date">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-xs-6 fr-date">
+                            <div class="trip-date">
+                                <label><img src="assets/images/calendar.png"> الذهاب فى</label>
+                                <div class="tarvel-date">
+                                    <input type="text" id="dataGo" class="datepicker form-control ">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-xs-6">
+                            <div class="trip-date trip-back" id="input-to">
+                                <label><img src="assets/images/calendar.png"> تاريخ العودة</label>
+                                <div class="tarvel-date">
+                                    <input type="text" id="dateReturn" class="datepicker form-control"  placeholder="+ اضف تاريخ العودة">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seat-col">
+                    <div class="">
+                        <div class="col-xl-12 col-md-12">
+                            <div class="number js-number" data-max-number="9">
+                                <button class="number-plus js-plus-number" type="button">+</button>
+
+                                <input type="text" class=" number-input" value="3">
+                                <button class="number-minus js-minus-number" type="button">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="search-ride">
+            <a href="booking-time.html" class="btn btn-primary">
+                <img src="assets/images/search.png" >
+                بحث
+            </a>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer class="footer">
+    <div class="footer-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <a href="account.html">
+                        <i class="far fa-user"></i>
+                        <p>الحساب</p>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="booking-ride.html" class="active">
+                        <i class="fas fa-bus-alt"></i>
+                        <p>الحجز</p>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="wallet.html">
+                        <i class="fas fa-wallet"></i>
+                        <p>المحفظة</p>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="https://jqueryui.com/resources/demos/datepicker/i18n/datepicker-ar.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    $( function() {
+        $( ".datepicker" ).datepicker({
+            regional: "ar",
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            dateFormat: 'DD, d MM, yy',
+            buttonImage: 'contact/calendar/calendar.gif',
+            buttonImageOnly: true,
+            minDate: 0,
+        });
+        $("#dataGo").datepicker().datepicker("setDate", new Date());
+
+    });
+</script>
+</body>
+</html>

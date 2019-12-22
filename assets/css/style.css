@@ -1,0 +1,2350 @@
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'DIN NEXT™ ARABIC', serif, Arial;
+    direction: rtl;
+    background: #F7F7F7;
+    font-size: 14px;
+    font-weight: bold;
+    /*overflow-x: hidden;*/
+}
+
+
+@font-face {
+    font-family: 'DIN NEXT™ ARABIC';
+    src: url('../fonts/DIN NEXT™ ARABIC BOLD.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'DIN NEXT™ ARABIC';
+    src: url('../fonts/DIN NEXT™ ARABIC Regular.otf');
+    font-weight: normal;
+}
+
+* {
+    outline: none !important;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*frist page loader*/
+.splash-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.logo {
+    display: block;
+    text-align: center;
+}
+
+.logo img {
+    width: 250px;
+    object-fit: contain;
+}
+
+.logo p {
+    color: white;
+}
+
+.load-wrapp {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.load-wrapp:last-child {
+    margin-right: 0;
+}
+
+.load-2 .line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #02CA03;
+}
+
+.load-2 .line:nth-last-child(1) {
+    animation: loadingB 1.5s 1s infinite;
+}
+
+.load-2 .line:nth-last-child(2) {
+    animation: loadingB 1.5s .5s infinite;
+}
+
+.load-2 .line:nth-last-child(3) {
+    animation: loadingB 1.5s 0s infinite;
+}
+
+@keyframes loadingB {
+    0% {
+        width: 15px;
+    }
+    50% {
+        width: 35px;
+    }
+    100% {
+        width: 15px;
+    }
+}
+
+
+/*start login page*/
+.logo-login {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding-top: 20px;
+    text-align: center;
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    direction: rtl;
+
+}
+
+.logo-login .form-group {
+    width: 100%;
+}
+
+.logo-login img {
+    width: 150px;
+}
+
+.logo-login .container {
+    padding-top: 30px;
+    direction: rtl;
+}
+
+.input-group-text img {
+    width: 20px;
+}
+
+.form-control {
+    background: transparent !important;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-radius: 0;
+    font-size: 14px;
+
+}
+.form-control::placeholder {
+    opacity: 0.6;
+}
+.form-control:focus {
+    border-color: #02CA03
+}
+.input-group-text {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: transparent;
+}
+
+
+.form-group .btn {
+    border-radius: 30px;
+    color: #fff !important;
+    background: #02CA03 !important;
+    border: none;
+    width: 100%;
+
+}
+
+
+.log-in {
+    background-color: #02CA03;
+    border-radius: 36px;
+    padding: 10px 100px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.log-in:hover {
+    background-color: #02CA03;
+    color: white;
+    text-decoration: none;
+}
+
+.forget {
+    margin: auto;
+    padding: 15px 0 0;
+}
+
+.forget a {
+    color: #071335;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*strat booking ride*/
+
+
+.tripType-switcher {
+    background: #F8F8F8;
+    border-radius: 25px;
+    padding: 7px 12px 1px 12px;
+    margin: 18px 0;
+    display: flex;;
+}
+
+.tab-content input[type=radio] {
+    display: none;
+}
+
+.tab-content .way {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 50%;
+    background-color: transparent;
+    box-sizing: border-box;
+    line-height: 35px;
+    color: #454545;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab-content input[type=radio]:checked + .way {
+    background: #02CA03;
+    color: #fff;
+    cursor: default;
+}
+
+.choose-trip {
+    position: relative;
+    text-align: right;
+}
+.form-group label {
+    position: relative;
+    color: #C8C8C8;
+    font-size: 10px;
+    margin: 0;
+}
+
+.choose-trip .form-group label i {
+    color: white;
+    position: relative;
+    border-radius: 50%;
+    background-color: #071335;
+    padding-top: 4px;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+.choose-trip .form-group label:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.choose-trip .form-group {
+    margin: 0;
+    width: calc(100% - 80px);
+    text-align: right !important;
+}
+
+.choose-trip .form-group select {
+    margin-top: -14px;
+    border: none !important;
+    margin-right: 15px;
+
+}
+.choose-trip .divider {
+    width: 100%;
+    text-align: right;
+    display: block;
+    padding-right: 30px;
+}
+.choose-trip .divider hr{
+    margin: 10px 0;
+    text-align: right;
+    display: block;
+    width: calc(100% - 70px);
+}
+.swap {
+    position: absolute;
+    top: 35px;
+    left: 2px;
+}
+
+.swap button {
+    background: #E6E7EA !important;
+    border: none !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    width: 40px;
+
+}
+.swap img {
+    width: 16px;
+}
+.last-select{
+    position: relative;
+}
+.last-select:before {
+    content: '';
+    position: absolute;
+    top: -45px;
+    right: 9px;
+    width: 1px;
+    height: 50px;
+    border: 1px dashed #ccc;
+}
+.last-select label i {
+    background-color: #0CB613;
+    border-radius: 50%;
+}
+
+.last-select .active {
+    color: #0CB613
+}
+
+.dt {
+    padding: 20px 0 0 0;
+}
+
+.trip-date {
+    position: relative;
+    width: auto;
+}
+
+.trip-date label {
+    margin-bottom: -17px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #C8C8C8;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+
+}
+
+.trip-date label img {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+.trip-date .datepicker {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.choose-date {
+    border-bottom: 1px solid #ced4da;
+}
+
+/*.choose-date input {
+    font-family: 'MarkaziText-VariableFont_wght', serif;
+}*/
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    width: 48px;
+}
+.ui-datepicker-rtl .ui-icon {
+    width: 100%;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: 24px !important;
+}
+.ui-widget-header {
+    border: none;
+    background: #02CA03;
+    color: #fff;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: none;
+    background: rgba(2, 202, 3, 0.7);
+    color: #fff;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: none;
+    background: #02CA03;
+    color: #fff;
+}
+.trip-date .datepicker {
+    width: 100%;
+    padding: 12px 6px 12px 0;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #252525 !important;
+    border: none !important;
+    cursor: pointer;
+    min-height: 40px;
+}
+.fr-date::after {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 3px;
+    background-color: #ced4da;
+    bottom: 21px;
+    right: 100%;
+}
+.choose-date .col-xl-6 {
+    width: 50%;
+    padding-left: 0;
+}
+.form-control option {
+    background-color: #071335;
+}
+
+/*passenger*/
+.seat-col {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.number {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 36px;
+    padding: 0;
+    margin: 0 auto;
+}
+.seat-col input {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 20px 4px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin: 0 10px;
+}
+
+.number-plus,
+.number-minus {
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    background: #071335;
+    font-size: 20px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+#input-to {
+    display: block;
+}
+
+.search-ride {
+    display: block;
+    text-align: center;
+    margin: 10px auto 0;
+}
+
+.btn-primary {
+    width: 290px;
+    max-width: 100%;
+    color: #fff !important;
+    background: linear-gradient(to right , #1F932F , #0ece16) !important;
+    border: none !important;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.search-ride a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-ride a img {
+    width: 20px;
+}
+
+
+/*account*/
+.header-booking {
+    position: relative;
+    background: linear-gradient(#02ca03 0%, #1b9a29 100%);
+    width: 100%;
+    height: 130px;
+    border-radius: 0 0 50% 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header-booking .header-booking-title {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    line-height: 2;
+}
+.header-booking.wallet .header-booking-title {
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: -50px;
+}
+.header-booking.wallet .header-booking-title img{
+    width: 16px;
+}
+
+.booking-card {
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: -38px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+.booking-card .col-xl-10 {
+    margin: 20px auto;
+}
+
+.user-circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-color: #02ca03;
+    text-align: center;
+
+}
+
+.user-circle i {
+    font-size: 40px;
+    color: white;
+    padding: 38px;
+}
+
+.account-user {
+    padding-top: 90px;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
+.account-user .col-sm-12 {
+    margin: auto;
+}
+
+.account-user .col-sm-12 i {
+    font-size: 18px;
+    color: #02CA03;
+}
+
+.account-user .col-sm-12 button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #071335;
+    border: none !important;
+
+}
+
+.account-user .col-sm-12 .sec-btn {
+    background-color: #02CA03;
+}
+
+.account-user .form-group {
+    width: 100%;
+}
+
+
+/*booking-time*/
+
+.booking-time {
+    display: inline-block;
+    width: auto;
+    min-width: 250px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 12px 12px 12px 12px #eeeeee30;
+    background-color: #fff;
+    position: relative;
+    top: 20px;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    border-radius: 15px;
+    font-weight: normal;
+}
+
+.booking-time h6 {
+    background-color: #02CA03;
+    padding: 8px 0 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.booking-time .flex {
+    display: flex;
+    width: 100%;
+    text-align: start;
+    padding: 0 10px;
+}
+
+.booking-time .flex img {
+    width: 60px;
+    margin: 10px auto;
+
+}
+.booking-time .flex p {
+    width: calc(100% - 70px);
+    font-size: 15px;
+    color: black;
+    margin: 10px 10px 10px 0;
+    text-align: right;
+}
+.booking-time .flex i {
+    display: inline-block;
+    font-size: 14px;
+    color: #02ca03;
+    margin: 0 6px;
+}
+
+.booking-time span {
+    color: #999999;
+    font-size: 12px;
+    display: block;
+    margin-top: -20px;
+    margin-right: 80px;
+    text-align: right;
+}
+
+.seat-val {
+    display: block;
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin: 100px auto 30px;
+}
+.ticket-menu{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.ticket-wrapper {
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 15px auto;
+    padding: 15px;
+    text-decoration: none !important;
+    transition: all 0.5s ease-in-out;
+}
+.super-jet:hover, .super-jet.active {
+    background-color: #02ca03;
+    color: #fff !important;
+}
+.super-elite-lux:hover, .super-elite-lux.active {
+    background-color: #CA9D02;
+    color: #fff !important;
+}
+.super-max:hover, .super-max.active {
+    background-color: #CA0236;
+    color: #fff !important;
+}
+.super-classic:hover, .super-classic.active {
+    background-color: #6E02CA;
+    color: #fff !important;
+}
+
+.ticket-wrapper .ticket-details{
+    display: flex;
+    width: 100%;
+}
+.ticket-wrapper .ticket-details .bus-img{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 22%;
+}
+.ticket-wrapper .ticket-details .bus-img img{
+    width: 40px;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .ticket-details .bus-img img,
+.ticket-wrapper.active .ticket-details .bus-img img{
+    filter: brightness(0) invert(1);
+}
+.ticket-wrapper .ticket-details .ticket-time-col{
+    display: inline-block;
+    width: 32%;
+    text-align: right;
+}
+.ticket-wrapper .ticket-details .ticket-time-col .ticket-company{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: center;
+    border-radius: 20px;
+    width: auto;
+    padding: 2px 8px 6px;
+    font-size: 9px;
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
+}
+.super-jet .ticket-company {
+    background-color: #02ca03;
+    color: #fff !important;
+}
+.super-elite-lux .ticket-company{
+    background-color: #CA9D02;
+    color: #fff !important;
+}
+.super-max .ticket-company{
+    background-color: #CA0236;
+    color: #fff !important;
+}
+.super-classic .ticket-company{
+    background-color: #6E02CA;
+    color: #fff !important;
+}
+.super-jet:hover .ticket-company, .super-jet.active .ticket-company {
+    background-color: #fff;
+    color: #02ca03 !important;
+}
+.super-elite-lux:hover .ticket-company, .super-elite-lux.active .ticket-company{
+    background-color: #fff;
+    color: #CA9D02 !important;
+}
+.super-max:hover .ticket-company, .super-max.active .ticket-company{
+    background-color: #fff;
+    color: #CA0236 !important;
+}
+.super-classic:hover .ticket-company, .super-classic.active .ticket-company {
+    background-color: #fff;
+    color: #6E02CA !important;
+}
+
+.ticket-wrapper .ticket-details .ticket-time-col .ticket-time{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #071335 !important;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .ticket-details .ticket-time-col .ticket-time,
+.ticket-wrapper.active .ticket-details .ticket-time-col .ticket-time{
+    color: #fff !important;
+}
+.ticket-wrapper .ticket-details .ticket-time-col .ticket-time span{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+}
+.ticket-wrapper .ticket-details .ticket-price-col{
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    padding: 0 4px;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .ticket-details .ticket-price-col,
+.ticket-wrapper.active .ticket-details .ticket-price-col{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.ticket-wrapper .ticket-details .ticket-price-col .ticket-price-title{
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #999999 !important;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .ticket-details .ticket-price-col .ticket-price-title,
+.ticket-wrapper.active .ticket-details .ticket-price-col .ticket-price-title{
+    color: #fff !important;
+}
+.ticket-wrapper .ticket-details .ticket-price-col .ticket-price{
+    font-size: 20px;
+    color: #071335 !important;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .ticket-details .ticket-price-col .ticket-price,
+.ticket-wrapper.active .ticket-details .ticket-price-col .ticket-price{
+    color: #fff !important;
+}
+.ticket-wrapper .ticket-details .ticket-img{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 22%;
+}
+.ticket-wrapper .ticket-details .ticket-img img{
+    width: 36px;
+    max-width: 80%;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .ticket-details .ticket-img img,
+.ticket-wrapper.active .ticket-details .ticket-img img{
+    filter: brightness(0) invert(1);
+}
+.ticket-wrapper .bus-features{
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    color: #999 !important;
+    font-size: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.ticket-wrapper:hover .bus-features,
+.ticket-wrapper.active .bus-features{
+    color: #fff !important;
+}
+.ticket-wrapper .bus-features span{
+    display: inline-block;
+    margin-left: 10px;
+}
+.ticket-wrapper .bus-features span:last-of-type{
+    margin-left: 0;
+}
+.ticket-wrapper .bus-features span i{
+    display: inline-block;
+    margin-left: 2px;
+}
+
+
+.extra .fa-utensils {
+    padding: 0 20px !important;
+}
+
+.extra .fa-tv {
+    padding: 0 20px !important;
+}
+
+.wallet h3 {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.wallet h1 {
+    color: white;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 0;
+    font-size: 56px;
+    margin-top: 10px;
+    direction: rtl;
+}
+.latest-trip{
+    width: 360px;
+    max-width: 100%;
+    font-size: 14px;
+    margin: 30px auto 20px;
+    text-align: right;
+}
+.wallet-hero {
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 20px;
+
+}
+.wallet-hero .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+.fri-row::after {
+    border-bottom: 1px dashed #999999;
+    content: "";
+    width: 74%;
+    position: absolute;
+    height: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: -341px;
+}
+
+.wallet-hero .col-xl-2 i {
+    font-size: 50px;
+    padding-top: 17px;
+    color: #CA9D02;
+}
+
+.back-wallet p {
+    width: 110px;
+    background-color: #CA9D02;
+    color: white;
+}
+
+.back-wallet h5 {
+    font-size: 45px;
+    line-height: .6;
+    margin-top: -4px;
+    padding-right: 36px;
+}
+
+.wallet-end {
+    text-align: right;
+}
+
+.wallet-end p {
+    font-size: 13px;
+    color: #999999;
+}
+
+.wallet-end h5 {
+    font-size: 26px;
+    line-height: 0;
+    color: #071335;
+
+}
+
+.wallet-end h5 i {
+    font-size: 12px;
+    color: #02ca03;
+}
+
+.back-wallet::after {
+    content: "";
+    height: 60px;
+    width: 3px;
+    position: absolute;
+    background-color: #999999;
+    left: 0;
+    top: 0;
+}
+
+.wallet-hero .sec-wallet {
+    padding-top: 20px;
+}
+
+
+.last-wall {
+    padding-top: 6px;
+}
+
+.sec-wallet {
+    color: #999999;
+}
+
+.yup::after {
+    content: "";
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    background-color: #999999;
+    left: 0;
+    top: 4px;
+}
+
+.sec-wallet i {
+    color: #02CA03;
+}
+
+.last-wall h6 {
+    color: #02CA03;
+}
+
+.wallet-mero {
+    margin: 10px 0;
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.wallet-mero .sec-wallet {
+    padding-top: 20px;
+}
+
+.wallet-mero .col-xl-2 i {
+    font-size: 50px;
+    padding-top: 17px;
+    color: #02CA03;
+}
+
+.wallet-mero .back-wallet p {
+    background-color: #02CA03;
+    color: white;
+}
+
+.secd-row::after {
+    border-bottom: 1px dashed #999999;
+    content: "";
+    width: 89%;
+    position: relative;
+    height: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: 9px;
+}
+
+.thr-row::after {
+    border-bottom: 1px dashed #999999;
+    content: "";
+    width: 90%;
+    position: relative;
+    height: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 14px;
+
+}
+
+.thr-row .back-wallet p {
+    background-color: #CA0236;
+}
+
+
+/*seat*/
+.seat-card {
+    width: 360px;
+    margin: -40px auto 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #8080803d;
+}
+
+.search-seat {
+    margin: 20px auto;
+}
+
+.seat-card .bus-img {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.seat-card .bus-img img{
+    width: 48px;
+
+}
+.seat-card .col-sm-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 0;
+}
+.seat-card .col-sm-6 {
+    text-align: right;
+}
+
+.seat-card .seat-company {
+    display: inline-block;
+    background-color: #02CA03;
+    border-radius: 20px;
+    width: auto;
+    padding: 0 10px 4px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    margin-top: 14px;
+}
+
+.seat-card .seat-time {
+    font-size: 22px;
+    margin-top: -2px;
+}
+.seat-card .seat-time span{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.icon {
+    text-align: justify;
+}
+
+.seat-card .icon i {
+    font-size: 10px;
+    text-align: justify;
+    padding: 5px 0
+
+}
+.cash-seat{
+    color: #999;
+}
+.cash-seat span{
+    color: #02CA03;
+    font-size: 18px;
+}
+.chair-card {
+    display: block;
+    width: 360px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.chair-card .right-side{
+    text-align: right;
+}
+.chair-card .left-side{
+    text-align: left;
+}
+.chair-card .seat-number{
+    display: inline-block;
+    color: #fff;
+    background: url("../images/seat-1.png") center no-repeat;
+    background-size: contain;
+    width: 44px;
+    height: 42px;
+    padding-top: 4px;
+    margin-top: 4px ;
+    margin-bottom: 4px ;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.chair-card .seat-number.reserved{
+    background: url("../images/seat-2.png") center no-repeat ;
+    background-size: contain;
+}
+.chair-card .seat-number.active{
+    background: url("../images/seat-3.png") center no-repeat;
+    background-size: contain;
+}
+.chair-card .right-side .seat-number{
+    margin-left: 10px;
+}
+.chair-card .left-side .seat-number{
+    margin-right: 10px;
+}
+/*promo*/
+.promo-card {
+    width: 360px;
+    max-width: 100%;
+    margin: -60px auto 0;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+.promo-card p img {
+    width: 20px;
+    margin-left: 10px;
+}
+.promo-card input {
+    border: 1px solid #E1E1E1;
+    background-color: #F7F7F7 !important;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+}
+.code-card {
+    width: 360px;
+    max-width: 100%;
+    margin: 25px auto;
+    position: relative;
+    border-radius: 20px;
+    background-color: #fff;
+
+}
+.code-card .hd-card {
+    background-color: #02CA03;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 15px 10px;
+}
+
+.code-card .circle-prom {
+    position: absolute;
+    width: 50px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: -25px;
+}
+
+.book-code {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4px 0;
+    margin: 0;
+    list-style: none;
+}
+.book-code li{
+    display: inline-block;
+    float: right;
+    vertical-align: center;
+    line-height: 24px;
+}
+.wallet-wrapper .book-code li:nth-of-type(2){
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.wallet-wrapper .book-code {
+    border-bottom: none;
+}
+.book-price {
+    font-size: 12px;
+    font-weight: normal;
+    color: #02CA03;
+}
+.wallet-wrapper .book-price {
+    font-size: 10px;
+}
+.book-price img{
+    width: 14px;
+    margin-top: -3px;
+}
+.wallet-wrapper .book-price img {
+    width: 12px;
+}
+.price-book {
+    float: left !important;
+    text-align: left;
+    color: #999999;
+    font-size: 10px;
+    font-weight: normal;
+    margin-top: -2px;
+}
+.wallet-wrapper .book-price, .wallet-wrapper .price-book{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.price-book .price {
+    display: inline-block;
+    color: #02CA03;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 48px;
+}
+.wallet-wrapper .price-book .price {
+    font-size: 14px;
+    padding-right: 10px;
+}
+.price-book .price span{
+    font-size: 12px;
+}
+.wallet-wrapper .price-book .price span{
+    font-size: 10px;
+}
+
+.circle-sec {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    bottom: 78px;
+    right: -20px;
+    margin: auto;
+
+}
+.circle-secd::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    right: -14px;
+    margin: auto;
+    bottom: 94px;
+}
+
+.circle-secd::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    left: -14px;
+    margin: auto;
+    bottom: 94px;
+}
+
+.wallet-wrapper .circle-secd::before,
+.wallet-wrapper .circle-secd::after{
+    bottom: 50px;
+}
+.circle-third {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    bottom: 114px;
+    left: -20px;
+    margin: auto;
+
+}
+/**/
+.invoice-wrapper{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0;
+}
+.wallet-wrapper{
+    margin: 20px auto;
+}
+.wallet-wrapper .invoice-wrapper{
+    padding: 10px 0;
+}
+.invoice-wrapper:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    left: 0;
+    margin: 0 auto;
+    width: calc(100% + 30px);
+    height: 1px;
+    border-bottom: 1px dashed #aaa;
+}
+.invoice-row{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.wallet-wrapper .invoice-row{
+    border: none !important;
+}
+.invoice-row:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    width: 1px;
+    height: 40px;
+    background: #ccc;
+
+}
+.invoice-row .bus-img{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+}
+.invoice-row .bus-img img{
+    width: 36px;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+}
+
+.invoice-row .invoice-time-col{
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+}
+.invoice-row .invoice-time-col .invoice-company{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: center;
+    border-radius: 20px;
+    width: auto;
+    padding: 2px 8px 6px;
+    font-size: 9px;
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
+}
+.super-jet.invoice-company {
+    background-color: #02ca03;
+    color: #fff !important;
+}
+.super-elite-lux.invoice-company{
+    background-color: #CA9D02;
+    color: #fff !important;
+}
+.super-max.invoice-company{
+    background-color: #CA0236;
+    color: #fff !important;
+}
+.super-classic.invoice-company{
+    background-color: #6E02CA;
+    color: #fff !important;
+}
+
+.invoice-row .invoice-trip{
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+.invoice-row .invoice-trip p{
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 2px;
+
+}
+.invoice-row .invoice-trip .invoice-trip-details{
+    font-size: 12px;
+    color: #000;
+    white-space: nowrap;
+}
+.invoice-row .invoice-trip .invoice-trip-details i{
+    color: #02ca03;
+}
+.invoice-row .invoice-trip .invoice-trip-details div{
+    color: #02ca03;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+/**/
+.thrd-conter {
+    display: inline-block;
+    padding: 10px 25px;
+    height: 110px;
+}
+.wallet-wrapper .thrd-conter{
+    padding: 10px 0;
+    height: 65px;
+}
+.thrd-conter .text-right p {
+    color: #999999;
+    font-size: 14px;
+    text-align: right;
+}
+
+.thrd-conter .text-right div {
+    color: #02CA03;
+    font-size: 22px;
+    line-height: 0;
+    text-align: right;
+}
+
+.thrd-conter .text-right div span {
+    color: #071335;
+    font-size: 16px;
+}
+
+.text-center a {
+    width: 100%;
+    border-radius: 36px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #02CA03;
+    color: white;
+}
+
+.done-card {
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin: -70px auto 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.done-card p {
+    text-align: center;
+}
+
+.done-card i {
+    background-color: #02CA03;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    padding-top: 7px;
+}
+
+.font-back {
+    background-color: #6E02CA;
+    width: 91px;
+}
+
+.p-secd {
+    font-size: 10px !important;
+    font-weight: normal;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+}
+
+.time-back {
+    background-color: #CA9D02;
+    width: 110px;
+}
+
+.tim-back {
+    background-color: #CA0236 !important;
+    width: 91px;
+}
+
+.ti-back {
+    background-color: #6E02CA !important;
+    width: 91px;
+}
+
+
+.last-wall .lose {
+    padding: 0 66px;
+    color: #999999;
+
+}
+
+.sec-wallet h6 {
+    font-size: 20px;
+}
+
+
+
+.text-center img {
+    width: 80%;
+}
+
+.free-pro p {
+    font-size: 12px;
+    width: 121px;
+}
+
+.free-pro h5 {
+    line-height: 1;
+    font-size: 20px;
+}
+
+.fri-row::after {
+    border-bottom: 1px dashed #999999;
+    content: "";
+    width: 89%;
+    position: relative;
+    height: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: 9px;
+
+
+}
+
+.thr-row::after {
+    border-bottom: 1px dashed #999999;
+    content: "";
+    width: 89%;
+    position: relative;
+    height: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: 9px;
+
+}
+
+.sec-wallet h6 {
+    font-size: 14px;
+}
+
+.last-wall {
+    padding-top: 10px;
+}
+
+.extra .fa-tv {
+    padding: 0 6px !important;
+}
+
+.extra .fa-utensils {
+    padding: 0 11px !important;
+}
+
+/*footer*/
+footer {
+    display: none;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.footer:before {
+    content: '';
+    position: absolute;
+    top: -73px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../images/city.png") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    opacity: 0.5;
+    z-index: -1;
+
+}
+footer > img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.footer-down {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    border-top: 2px solid #ccc;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 9999;
+}
+
+.footer-down a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #071335;
+    font-size: 14px;
+}
+
+.footer-down .active {
+    color: #02CA03;
+}
+
+.footer-down p {
+    margin: 0 !important;
+    line-height: 20px;
+}
+.copyrights{
+    position: relative;
+    bottom: 20px;
+    display: block;
+    color: #fff;
+    background: #02CA03;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+
+}
+.copyrights a{
+    color: #fff !important;
+}
+/*media query*/
+
+
+@media screen and (max-width: 1024px) {
+    .sec-wallet h6 {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .sec-wallet h6 {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .wallet-hero .col-xl-2 i {
+        font-size: 30px;
+    }
+
+    .back-wallet h5 {
+        font-size: 20px;
+        line-height: .6;
+        margin-top: -4px;
+        padding-right: -1px;
+    }
+
+    .wallet-mero .col-xl-2 i {
+        font-size: 30px;
+        padding-top: 17px;
+        color: #02CA03;
+    }
+
+    .wallet-end h5 {
+        font-size: 16px;
+    }
+
+    .sec-wallet h6 {
+        font-size: 11px !important;
+    }
+
+    .footer-down .col-xl-4 {
+        width: 33.333%;
+    }
+
+    .logo-login {
+        width: 90%;
+    }
+
+    .hd-card .row {
+        padding: 0 15px;
+        flex-wrap: nowrap;
+    }
+
+    .fri-pro {
+        text-align: right;
+    }
+
+    .code-card .fri-pro i {
+        font-size: 30px;
+    }
+
+    .sec-wallet h6 {
+        font-size: 9px;
+    }
+
+    .wallet-hero .col-xl-2 i {
+        font-size: 30px;
+    }
+
+    .back-wallet h5 {
+        font-size: 20px;
+        line-height: .6;
+        margin-top: -4px;
+        padding-right: -1px;
+    }
+
+    .wallet-mero .col-xl-2 i {
+        font-size: 30px;
+        padding-top: 17px;
+        color: #02CA03;
+    }
+
+    .wallet-end h5 {
+        font-size: 16px;
+    }
+
+    .sec-wallet h6 {
+        font-size: 11px !important;
+    }
+
+    .last-wall {
+        padding-top: 10px;
+    }
+
+    .wallet-end h5 {
+        font-size: 12px;
+
+    }
+
+    .wallet-hero .col-xl-2 i {
+
+        padding-top: 2px;
+    }
+
+    .back-wallet h5 {
+        font-size: 20px;
+        padding-right: 7px;
+    }
+
+    .fri-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 55% !important;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: -359px;
+
+    }
+
+    .thr-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 60%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+        bottom: -254px;
+    }
+
+    .chair-card .row {
+        flex-wrap: nowrap;
+    }
+    .seat-card .row {
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .seat-col input {
+        width: 64%;
+    }
+
+    .back-time p {
+        width: 75px;
+        font-size: 8px;
+        height: 11px;
+    }
+
+
+    .back-time::after {
+
+        height: 46px;
+
+    }
+
+    .extra .fa-utensils {
+        padding: 0 5px !important;
+    }
+
+    .extra .fa-tv {
+        padding: 0 5px !important;
+    }
+
+    .font-back {
+        background-color: #CA9D02;
+        width: 60px;
+        height: 9px;
+        color: white;
+        padding-top: 1px;
+    }
+
+    .circle-secd .row {
+        flex-wrap: nowrap;
+    }
+
+    .text-center img {
+        width: 80%;
+    }
+
+    .free-pro p {
+        font-size: 10px;
+        width: 85px;
+    }
+
+    .free-pro h5 {
+        line-height: 1;
+        font-size: 34px;
+    }
+
+    .free-pro h5 {
+        line-height: 0;
+        font-size: 27px;
+    }
+
+    .time-back {
+        width: 59px;
+        height: 10px;
+        padding-top: 1px;
+    }
+
+    .tim-back {
+        width: 59px;
+        height: 10px;
+        padding-top: 1px;
+    }
+
+    .wallet-hero .row {
+        flex-wrap: nowrap;
+    }
+
+    .wallet-hero .col-xl-2 i {
+        font-size: 34px;
+        padding-top: 4px;
+    }
+
+    .wallet-end p {
+        font-size: 10px;
+        color: #999999;
+    }
+
+    .sec-wallet h6 {
+        font-size: 8px;
+    }
+
+    .last-wall .lose {
+        padding: 0 10px;
+
+    }
+
+    .last-wall {
+        padding-top: 13px;
+    }
+
+    .fri-row::after {
+        top: -679px;
+    }
+
+    .wallet-mero .row {
+        flex-wrap: nowrap;
+    }
+
+    .wallet-mero .col-xl-2 i {
+        font-size: 34px;
+        padding-top: 4px;
+    }
+
+    .secd-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 82%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: 0;
+        top: -32px;
+    }
+
+    .sec-wallet h6 {
+        font-size: 8px;
+    }
+
+    .last-wall .lose {
+        padding: 0 10px;
+    }
+
+    .fri-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 74%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: -359px;
+
+    }
+
+    .thr-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 83%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+        bottom: -254px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .seat-col input {
+        width: 64%;
+    }
+
+    .back-time p {
+        width: 59px;
+        font-size: 8px;
+        height: 9px;
+    }
+
+    .back-time::after {
+
+        height: 46px;
+
+    }
+
+    .extra .fa-utensils {
+        padding: 0 5px !important;
+    }
+
+    .extra .fa-tv {
+        padding: 0 2px !important;
+    }
+
+    .font-back {
+        background-color: #CA9D02;
+        width: 60px;
+        height: 9px;
+        color: white;
+        padding-top: 1px;
+    }
+
+    .circle-secd .row {
+        flex-wrap: nowrap;
+    }
+
+    .text-center img {
+        width: 80%;
+    }
+
+    .free-pro p {
+        font-size: 10px;
+        width: 85px;
+    }
+
+    .free-pro h5 {
+        line-height: 1;
+        font-size: 14px;
+    }
+
+    .free-pro h5 {
+        line-height: 0;
+        font-size: 14px;
+    }
+
+    .time-back {
+        width: 59px;
+        height: 10px;
+        padding-top: 1px;
+    }
+
+    .tim-back {
+        width: 59px;
+        height: 10px;
+        padding-top: 1px;
+    }
+
+    .chair-card .tok-seat .right-f {
+        right: 111px;
+    }
+
+    .chair-card .tx .right-f {
+        right: 96px;
+    }
+
+    .wallet-hero .row {
+        flex-wrap: nowrap;
+    }
+
+    .wallet-hero .col-xl-2 i {
+        font-size: 34px;
+        padding-top: 4px;
+    }
+
+    .wallet-end p {
+        font-size: 10px;
+        color: #999999;
+    }
+
+    .sec-wallet h6 {
+        font-size: 8px;
+    }
+
+    .last-wall .lose {
+        padding: 0 10px;
+
+    }
+
+    .last-wall {
+        padding-top: 13px;
+    }
+
+    .fri-row::after {
+        top: -679px;
+    }
+
+    .wallet-mero .row {
+        flex-wrap: nowrap;
+    }
+
+    .wallet-mero .col-xl-2 i {
+        font-size: 34px;
+        padding-top: 4px;
+    }
+
+    .secd-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 82%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: 0;
+        top: -32px;
+    }
+
+    .sec-wallet h6 {
+        font-size: 9px;
+    }
+
+    .last-wall .lose {
+        padding: 0 10px;
+    }
+
+    .fri-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 82%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: -355px;
+    }
+
+    .thr-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 83%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+        bottom: -254px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .seat-col input {
+        width: 64%;
+    }
+
+    .back-time p {
+        width: 81px;
+        font-size: 9px;
+        height: 13px;
+    }
+
+    .back-time::after {
+
+        height: 46px;
+
+    }
+
+    .extra .fa-utensils {
+        padding: 0 5px !important;
+    }
+
+    .extra .fa-tv {
+        padding: 0 2px !important;
+    }
+
+    .font-back {
+        background-color: #CA9D02;
+        width: 60px;
+        height: 9px;
+        color: white;
+        padding-top: 1px;
+    }
+
+    .circle-secd .row {
+        flex-wrap: nowrap;
+    }
+
+    .text-center img {
+        width: 80%;
+    }
+
+    .free-pro p {
+        font-size: 10px;
+        width: 85px;
+    }
+
+    .free-pro h5 {
+        line-height: 1;
+        font-size: 34px;
+    }
+
+    .free-pro h5 {
+        line-height: 0;
+        font-size: 14px;
+    }
+
+    .time-back {
+        width: 59px;
+        height: 10px;
+        padding-top: 1px;
+    }
+
+    .tim-back {
+        width: 59px;
+        height: 10px;
+        padding-top: 1px;
+    }
+
+    .wallet-hero .row {
+        flex-wrap: nowrap;
+    }
+
+    .wallet-hero .col-xl-2 i {
+        font-size: 34px;
+        padding-top: 4px;
+    }
+
+    .wallet-end p {
+        font-size: 10px;
+        color: #999999;
+    }
+
+    .sec-wallet h6 {
+        font-size: 8px;
+    }
+
+    .last-wall .lose {
+        padding: 0 10px;
+
+    }
+
+    .last-wall {
+        padding-top: 13px;
+    }
+
+    .fri-row::after {
+        top: -679px;
+    }
+
+    .wallet-mero .row {
+        flex-wrap: nowrap;
+    }
+
+    .wallet-mero .col-xl-2 i {
+        font-size: 34px;
+        padding-top: 4px;
+    }
+
+    .secd-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 82%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: 0;
+        top: -32px;
+    }
+
+    .sec-wallet h6 {
+        font-size: 8px;
+    }
+
+    .last-wall .lose {
+        padding: 0 10px;
+    }
+
+    .fri-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 82% !important;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: -349px;
+    }
+
+    .thr-row::after {
+        border-bottom: 1px dashed #999999;
+        content: "";
+        width: 83%;
+        position: absolute;
+        height: 3px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+        bottom: -254px;
+    }
+    .trip-date .datepicker {
+        font-size: 11px;
+    }
+    .seat-card, .chair-card,.code-card, .promo-card, .done-card, .latest-trip {
+        width: 290px;
+    }
+    .price-book .price {
+        padding-right: 16px;
+    }
+    .wallet-wrapper .price-book .price {
+        padding-right: 0;
+    }
+}
+
+
+
+
